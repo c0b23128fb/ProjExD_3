@@ -135,11 +135,10 @@ class Beam:
 
 
 class Score:
+    """
+    ビームで爆弾を当てた時のスコアを表示させるクラス
+    """
     def __init__(self):
-        #self.fonto = pg.font.SysFont("hgp創英角ポップ体", 30)
-        #self.score = 0
-        #self.update_img()
-
         self.fonto = pg.font.SysFont("hgp創英角ﾎﾟｯﾌﾟ体", 30)
         self.score = 0
         self.update_img()
@@ -157,6 +156,9 @@ class Score:
         self.score += 1
         
 class Explosion:
+    """
+    爆弾とビームが衝突した時に爆弾エフェクト表示されるクラス
+    """
     def __init__(self,obj,life:int):
         self.imgs = [
             pg.image.load("fig/explosion.gif"),
